@@ -6,7 +6,7 @@ Companion project for the Apache Spark WTF article **“When Threads Go Bump in 
 
 - Apache Spark / PySpark **4.2.0** (pinned in `requirements.txt`)
 - Python **3.10 or newer**; notebooks were designed for Python 3.13 as well
-- Java **17, 21, or 25** for Spark 4.2.0; JDK 21+ for the Loom notebook
+- Java **17, 21, or 25** for Spark 4.2.0. Use a full JDK, not only a JRE: notebook 02 needs `jcmd`; notebooks 03 and 08 need `javac` and JDK 21+ for virtual threads.
 - Jupyter Notebook or JupyterLab
 
 Spark 4.2.0's official docs: [release](https://spark.apache.org/releases/spark-release-4-2-0), [overview and supported runtimes](https://spark.apache.org/docs/4.2.0/), [PySpark install](https://spark.apache.org/docs/4.2.0/api/python/getting_started/install.html).
