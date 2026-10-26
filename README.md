@@ -44,7 +44,7 @@ Open a notebook in `notebooks/` and run cells in order. Local Spark sessions use
 ## Safety and interpretation
 
 - The OOM lab observes existing limits; it does not intentionally exhaust heap, memory or PIDs.
-- The retry lab records task attempt metadata and models duplicate sink writes in memory. It does not contact external systems.
+- The retry lab records task attempt metadata and writes duplicate rows only to a disposable local file. It does not contact external systems.
 - The thread dump lab uses `jcmd` only against a process you own or are authorized to inspect.
 - Thread counts, RSS/PSS, JVM heap, Native Memory Tracking and cgroup totals have different scopes. Read the notebook caveats before interpreting them.
 - Spark retries and speculation can repeat physical work; arbitrary side effects need an idempotent or transactional sink.
