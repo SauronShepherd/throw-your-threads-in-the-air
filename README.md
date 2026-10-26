@@ -23,7 +23,7 @@ python -m pip install jupyterlab
 jupyter lab
 ```
 
-Open a notebook in `notebooks/` and run cells in order. Local Spark sessions use small datasets and `local[2]`. Labs that inspect OS/cgroup state report “not available” on unsupported platforms. Do not run resource-exhaustion experiments on shared or production clusters.
+Open a notebook in `notebooks/` and run cells in order. Local Spark sessions use small datasets. Most use `local[2]`; notebook 07 uses `local[2,2]` so the deliberately failing task can be retried. Labs that inspect OS/cgroup state report “not available” on unsupported platforms. Do not run resource-exhaustion experiments on shared or production clusters.
 
 ## Notebook map
 
